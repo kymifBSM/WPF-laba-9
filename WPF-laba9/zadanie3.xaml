@@ -1,0 +1,35 @@
+﻿<Window x:Class="WPF_laba9.zadanie3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_laba9"
+        mc:Ignorable="d"
+        Title="zadanie3" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="3">
+            <Label Content="Введите, пожалуйста, число" FontWeight="SemiBold" FontSize="20" Margin="0 5 0 0" HorizontalAlignment="Center"/>
+            <TextBox x:Name="digit" Margin="25" FontSize="18" Width="250" HorizontalAlignment="Center"/>
+            <Label Content="Выберите, в какую систему надо перевести число" FontWeight="SemiBold" FontSize="17" Margin="0 5 0 0" HorizontalAlignment="Center"/>
+            <Label Content="Система счисления" FontWeight="SemiBold" FontSize="17" Margin="0 25 0 0" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="binary" Content="двоичная" FontSize="17" Margin="0 7 60 0" Checked="Binary" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="octagonal" Content="восьмиричная" FontSize="17" Margin="0 7 24 0" Checked="Octagonal" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="res" Margin="20 38 0 0" FontSize="18" Width="200" Height="25" HorizontalAlignment="Center" Grid.ColumnSpan="3"/>
+
+        </StackPanel>
+
+
+        <Label Grid.Column="0" Grid.ColumnSpan="2" Content="Результат:" FontWeight="SemiBold" FontSize="20" Margin="200 300 0 0" HorizontalAlignment="Left"/>
+   
+        <Button x:Name="сalculate" Grid.Column="0" Grid.ColumnSpan="2" Click="Calculate" Content="Вычислить" Margin="-25 325 0 0" FontSize="18" Height="30" Width="140"/>
+        <Button x:Name="reset" Grid.Column="0" Grid.ColumnSpan="3" Click="Reset" Content="Сброс" Margin="0 325 0 0" FontSize="18" Height="30" Width="140" HorizontalAlignment="Center"/>
+        <Button x:Name="exit" Grid.Column="0" Grid.ColumnSpan="3" Click="Exit" Content="Выход" Margin="290 325 0 0" FontSize="18" Height="30" Width="140"/>
+        <Button x:Name="back" Grid.Column="0" Grid.ColumnSpan="3" Click="Back" Content="👈" Margin="10 0 0 10" FontSize="18" Height="30" Width="50" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>

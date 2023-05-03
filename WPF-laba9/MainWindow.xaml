@@ -1,0 +1,43 @@
+﻿<Window x:Class="WPF_laba9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_laba9"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="1000">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.67*" />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+
+            <Label Content="Первое число" FontSize="20" Margin="20 5 0 0"/>
+            <TextBox x:Name="first" Margin="10" FontSize="18" Width="350"/>
+            <Label Content="Второе число" FontSize="20" Margin="20 5 0 0"/>
+            <TextBox x:Name="second" Margin="10" FontSize="18" Width="350"/>
+            <Label Content="Результат" FontSize="20" Margin="20 5 0 0"/>
+            <TextBlock x:Name="result" Margin="10" FontSize="18" Width="350"/>
+
+        </StackPanel>
+
+        <DockPanel Grid.Column="1">
+            <StackPanel DockPanel.Dock="Top">
+
+                <Label Content="Выберите операцию" FontWeight="SemiBold" FontSize="20" Margin="0 5 0 0"/>
+                <RadioButton Content="Сложение" FontSize="18" Margin="5 5 0 5" Checked="Addition"/>
+                <RadioButton Content="Вычитание" FontSize="18" Margin="5 5 0 5" Checked="Subtraction"/>
+                <RadioButton Content="Умножение" FontSize="18" Margin="5 5 0 5" Checked="Multiplication"/>
+                <RadioButton Content="Деление" FontSize="18" Margin="5 5 0 5" Checked="Division"/>
+                <RadioButton Content="Возведение в степень" FontSize="18" Margin="5 5 0 5" Checked="Exponentiation"/>
+                <RadioButton Content="Остаток от деления" FontSize="18" Margin="5 5 0 5" Checked="Remainder"/>
+
+            </StackPanel>
+
+            <Button FontSize="20" FontWeight="SemiBold" Background="AliceBlue" DockPanel.Dock="Bottom" Content="Задание 2" Height="75" Width="180" Margin="0 135 0 0" Click="Zadanie2"/>
+        </DockPanel>
+    </Grid>
+</Window>
